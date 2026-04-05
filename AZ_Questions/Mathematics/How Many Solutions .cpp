@@ -1,4 +1,5 @@
 /* How Many solutions 
+
 1/a + 1/b = 1/n 
         ≡
 (a-n).(b-n) = n^2     ; a,b are floating points with atmost d digits after decimal point
@@ -12,6 +13,7 @@ so number of solutions = 2*d(n'^2)-1
 */
 #include<bits/stdc++.h>
 using namespace std;
+const int MOD=1e6+7;
 #define int  long long int
 int solve(int n,int d){  //n>0 and d>=0a
     
@@ -38,10 +40,11 @@ int solve(int n,int d){  //n>0 and d>=0a
     int div=1;
     for(auto p:m){
         //cout<<p.first<<' '<<p.second<<'\n';
-        div*=(1+p.second);
+        div=div*(1+p.second)%MOD;
     }
-    int ans = 2*div-1; //#solutions = 2* (divisors of n'^2) - 1
-    return ans;
+    int ans = 2*div-1; //#solutions = 2* (divisors of n'^2) - 1 
+    //modular sub => ans could become neg
+    return ((ans%MOD)+MOD)%MOD;
 }
 signed main(){
     while(true){
