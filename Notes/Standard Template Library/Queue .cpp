@@ -1,7 +1,19 @@
 /*
+                      Important Modifiers of Containers Queue 
+
+                      
+                          
+1. empty()     :  returns true if the queue is empty or else returns false
+2. size()      :  returns the number of ements in the queue
+3. swap()      :  exchange the contents of two queues bu tht queues must be of the same data type, although sizez may differ. 
+4. emplace()   :  Insert a new element into the queue container, the new element is added to the end of the queue.
+5. front()     :  returns a reference to the first element of the queue
+6. back()      :  returns a reference to the last element of the queue.
+7. push(g)     :  adds the element 'g' at the end of the queue.
+8. pop()       :  deletes the first element of the queue.
+
 
 */
-
 #include <iostream>
 #include <queue>
 
