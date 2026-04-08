@@ -1,4 +1,22 @@
+/*
+Important Modifiers of Containers Vectors
 
+                          Time Complexity
+                  
+1. empty ()       :            O(1)              ; Indicates whether teh priority queue is empty or not 
+2. size()         :            O(1)              ; Proves the count of elements present in the priority queue.
+3. top()          :            O(1)              ; Retrieves a reference to the highest pririty element in the queue
+4. push()         :            O(logn)           ; Appends the element g to the end of the priority queue and adjusts the heap to maintain its max property
+5. pop()          :            O(logn)           ; Removes the foremost element form the priority queue and adjusts the heap
+6. emplace()      :            O(logn)           ; Inserts a new element into the priority queue , maintaining the order based on priority and adjusting the heap
+
+
+
+
+
+
+
+*/
 
 
 #include <iostream>
