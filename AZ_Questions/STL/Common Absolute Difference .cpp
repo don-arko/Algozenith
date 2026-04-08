@@ -30,7 +30,7 @@ void solve(){
         mp[curr]++;
     }cout<<ans<<'\n';
 }
-signed main(){   
+signed main(){     // O(T* NlogN)   now given ∀T ∑N <=1e6 {given}  so O(T* NlogN)= ∀T ∑(NlogN) = ∀T logN . ∑N = 20*1e6 = 1e7 <=1e8  {assuming logN to be worst case each time hence logN const and can be taken out of summation}
     int t;cin>>t;
     while(t--) solve();
 }
