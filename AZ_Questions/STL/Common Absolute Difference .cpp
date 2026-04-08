@@ -19,6 +19,16 @@ void solve(){
         if(t2!=t1) ans+=mp[t2]; //avoid overcounting if k=0 then t1=t2
         mp[curr]++;
     }cout<<ans<<'\n';
+} //if K!=0 {given} hence no check req t1 and t2 are always distinct
+void solve(){
+    int n,k;cin>>n>>k;
+    map<int,int> mp;
+    int ans=0;
+    for(int i=0;i<n;i++){
+        int curr;cin>>curr;
+        ans+=mp[curr-k]+mp[curr+k];
+        mp[curr]++;
+    }cout<<ans<<'\n';
 }
 signed main(){
     int t;cin>>t;
