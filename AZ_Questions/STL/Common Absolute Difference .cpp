@@ -11,11 +11,11 @@ void solve(){
     int n,k;cin>>n>>k;
     map<int,int> mp;
     int ans=0;
-    for(int i=0;i<n;i++){
+    for(int i=0;i<n;i++){   //O(NlogN)
         int curr;cin>>curr;
         int t1=curr-k;  //target 1 , can be neg but no worries as their freq will always be 0 as they are absent in the array
         int t2=curr+k;
-        ans+=mp[t1]; 
+        ans+=mp[t1];      //O(logn)
         if(t2!=t1) ans+=mp[t2]; //avoid overcounting if k=0 then t1=t2
         mp[curr]++;
     }cout<<ans<<'\n';
@@ -30,7 +30,7 @@ void solve(){
         mp[curr]++;
     }cout<<ans<<'\n';
 }
-signed main(){
+signed main(){   
     int t;cin>>t;
     while(t--) solve();
 }
