@@ -29,7 +29,7 @@ int main() {
     cout << *s.find_by_order(0) << endl; // smallest element
 
     // count elements less than x
-    cout << s.order_of_key(25) << endl;
+    cout << s.order_of_key(25) << endl; //gives the idx for value = x {if present} or idx where x should be inserted {if not present}
 
     return 0;
 }
