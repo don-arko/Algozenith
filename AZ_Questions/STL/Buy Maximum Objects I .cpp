@@ -16,7 +16,7 @@ void solve(){
     }
     cout<<cnt<<'\n';
 }
-int32_t main(){   //TC = O(T*N) = ∀ T ∑ N <= 5e5 {given} =< 1e8 hence passes
+int32_t main(){   //TC = O(T*NlogN) as ∀ T ∑ N <= 5e5 {given}  so ∀ T ∑ NlogN  <= ∀ T  log N{max} ∑ N =  20 * 5e5 = 1e7 <= 1e8 hence passes {since we consider logN to be max in every tc hence taken out as common from summation}
     ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
     int tt;cin>>tt;
     while(tt--){
